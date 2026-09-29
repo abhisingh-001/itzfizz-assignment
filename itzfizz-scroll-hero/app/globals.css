@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background: #07080a;
+}
+
+body {
+  color: #f4f4f5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* letters start dim, the car "lights" them up while driving past */
+.letter {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.2);
+  will-change: transform, color;
+}
+
+/* hidden until the intro timeline runs (JS flips them on) */
+[data-intro] .letter,
+[data-intro] .stat-card,
+[data-intro] .hud {
+  opacity: 0;
+}
+
+.road-dashes {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.55) 0 60px,
+    transparent 60px 120px
+  );
+}
+
+.beam {
+  background: linear-gradient(90deg, rgba(255, 236, 190, 0.28), transparent 85%);
+  clip-path: polygon(0 42%, 100% 0, 100% 100%, 0 58%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .letter {
+    color: #ff5a1f;
+  }
+}
