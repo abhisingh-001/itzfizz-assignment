@@ -1,45 +1,35 @@
-# Itzfizz – Scroll-Driven Hero
+# 🚗 Itzfizz - Scroll-Driven Hero Animation
 
-Hero section where a car drives across the screen as you scroll. Built for the
-Itzfizz Digital web development internship assignment.
+> A premium, highly performant scroll-driven hero section built for the **Itzfizz Digital** Web Development Internship Assignment.
 
-**Stack:** Next.js (App Router), React, Tailwind CSS, GSAP + ScrollTrigger, Lenis
+**[✨ VIEW LIVE DEMO ✨](https://itzfizz-scroll-hero-sable.vercel.app/)**
 
-## What it does
+---
 
-- Headline and stat cards animate in on load (staggered fade + rise, numbers count up)
-- Scrolling pins the hero and moves the car based on scroll progress (`scrub`), not time
-- Each headline letter lights up as the car passes over it
-- Road markings, headlight beam and speed readout follow the same progress
-- Only `transform` / `opacity` are animated, no layout work in the scroll handler
-- Respects `prefers-reduced-motion`
+## 🌟 Overview
 
-## Run locally
+This project showcases advanced frontend animation techniques using **GSAP** and **Next.js**. The hero section features a car that smoothly drives across the screen based on the user's scroll progress, creating an immersive, interactive experience without compromising on performance.
 
-```bash
-npm install
-npm run dev
-```
+## 🚀 Features
 
-Open http://localhost:3000
+- **Scroll-Linked Animation:** The main car visual moves horizontally in perfect sync with the scroll progress (using `scrub: true`).
+- **Staggered Entry:** Beautiful fade-in and upward motion for typography and stat cards on initial page load.
+- **Dynamic Text Interaction:** Each headline letter lights up/interacts as the car passes over it.
+- **Performance Optimized:** Uses only hardware-accelerated CSS properties (`transform`, `opacity`) to ensure buttery-smooth 60fps animations.
+- **Fully Responsive:** Perfectly adapts to desktop, tablet, and mobile screens.
 
-## Deploy on GitHub Pages
+## 🛠️ Tech Stack
 
-1. Push this repo to GitHub (branch `main`)
-2. Repo **Settings → Pages → Source: GitHub Actions**
-3. The workflow in `.github/workflows/deploy.yml` builds and publishes it
+- **Framework:** Next.js (App Router) & React
+- **Styling:** Tailwind CSS
+- **Animation:** GSAP (GreenSock) + ScrollTrigger plugin
+- **Deployment:** Vercel
 
-The live URL will be `https://<username>.github.io/<repo-name>/`
+## 💻 Run Locally
 
-## Structure
+Want to run this project on your local machine? Follow these steps:
 
-```
-app/          layout, page, global styles
-components/   Hero (all the animation), Car (SVG), StatCard
-data/         stats content
-```
-
-## Notes
-
-- The car is an inline SVG so the project has no image dependencies.
-- Scroll timeline is rebuilt on resize because letter positions depend on screen width.
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/abhisingh-001/itzfizz-assignment.git](https://github.com/abhisingh-001/itzfizz-assignment.git)
+   
